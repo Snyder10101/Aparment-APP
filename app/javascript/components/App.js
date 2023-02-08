@@ -26,7 +26,6 @@ const App = (props) => {
       })
       .catch((error) => console.log(error))
   }
-console.log(apartments)
   return (
     <BrowserRouter>
       <Header {...props} />
