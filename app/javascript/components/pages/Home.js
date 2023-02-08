@@ -24,7 +24,7 @@ const Home = ({ new_user_route, sign_in_route }) => {
       <Button href={new_user_route} className="nav-link">
         Sign Up
       </Button>
-      <Button onClick={sign_in_route} className="nav-link">
+      <Button href={sign_in_route} className="nav-link">
         Sign In
       </Button>
     </div>
