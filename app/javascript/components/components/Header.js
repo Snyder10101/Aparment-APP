@@ -16,47 +16,48 @@ const Header = ({
   
   return (
     <div>
-      <Navbar>
-          <Nav className= "header" navbar>
+      <Navbar className = "nav-bar">
+          <Nav className = "header" navbar>
             <NavItem>
-              <NavLink href="/">Home</NavLink>
+              <NavLink className = "nav-text" href="/">Home</NavLink>
             </NavItem>
+            <div></div>
             {logged_in && ( 
             <NavItem>
-              <NavLink href="/apartmentindex" >View Listings</NavLink>
-            </NavItem>
-            )}
-            {logged_in && ( 
-            <NavItem>
-              <NavLink href="/apartmentshow/:id" >My Listings</NavLink>
+              <NavLink className = "nav-text" href="/apartmentindex" >View Listings</NavLink>
             </NavItem>
             )}
+              {logged_in && ( 
+              <NavItem>
+                <NavLink className = "nav-text" href="/apartmentnew" >Create Listing</NavLink>
+              </NavItem>
+              )}
+              {logged_in && ( 
+              <NavItem>
+                <NavLink className = "nav-text" href="/apartmentshow/:id" >My Listings </NavLink>
+              </NavItem>
+              )}
             {logged_in && ( 
-            <NavItem>
-              <NavLink href={sign_out_route} >Sign Out</NavLink>
-            </NavItem>
-            )}
-            {logged_in && ( 
-            <NavItem>
-              <NavLink href="/apartmentnew" >Create Listing</NavLink>
+              <NavItem>
+              <NavLink className = "nav-text" href={sign_out_route} >Sign Out</NavLink>
             </NavItem>
             )}
 
             {!logged_in && ( 
             <NavItem>
-              <NavLink href="/apartmentindex" >View Listings</NavLink>
+              <NavLink className = "nav-text" href="/apartmentindex" >View Listings</NavLink>
             </NavItem>
             )}
             {!logged_in && ( 
             <NavItem>
-              <NavLink href={sign_in_route}>
+              <NavLink className = "nav-text" href={sign_in_route}>
                 Sign In
               </NavLink>
             </NavItem>
             )}
             {!logged_in && ( 
             <NavItem>
-              <NavLink a href={new_user_route}>
+              <NavLink className = "nav-text" a href={new_user_route}>
                 Sign Up
               </NavLink>
             </NavItem>
