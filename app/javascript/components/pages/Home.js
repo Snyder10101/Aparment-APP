@@ -2,14 +2,17 @@ import React from "react";
 import { Button } from "reactstrap";
 import { useNavigate } from "react-router-dom";
 
-const Home = ({ welcomeProp, new_user_route, sign_in_route }) => {
-  const navigate = useNavigate();
+const Home = ({ welcomeProp, new_user_route, sign_in_route, }) => {
+  const navigate = useNavigate ()
+
   const viewListings = () => {
     navigate("/apartmentindex");
   };
+
   const viewMyListings = () => {
     navigate("/");
   };
+
   if (!welcomeProp.logged_in) {
     return (
       <div
@@ -34,6 +37,7 @@ const Home = ({ welcomeProp, new_user_route, sign_in_route }) => {
       </div>
     );
   }
+  
   if (welcomeProp.logged_in) {
     return (
       <div
