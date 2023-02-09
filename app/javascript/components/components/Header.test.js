@@ -13,4 +13,11 @@ describe("<Header />", () => {
       div
     )
   })
+  it("has a nav link", () => {
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>,
+    )
+  })
 })
