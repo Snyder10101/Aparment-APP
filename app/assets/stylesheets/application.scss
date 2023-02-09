@@ -14,3 +14,12 @@
  *= require_self
  */
 @import 'bootstrap';
+
+.header {
+    height: 10rem;
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+}

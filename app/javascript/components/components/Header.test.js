@@ -1,7 +1,9 @@
 import React from "react"
-import { render } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
+import "@testing-library/jest-dom"
 import Header from "./Header"
 import { BrowserRouter } from "react-router-dom"
+import userEvent from "@testing-library/user-event"
 
 describe("<Header />", () => {
   it("renders without crashing", () => {
@@ -12,5 +14,14 @@ describe("<Header />", () => {
       </BrowserRouter>,
       div
     )
+  })
+  it("has a clickable links", () => {
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    )
+    const text = screen.getByText(/Home/i)
+    expect(text).toBeInTheDocument()
   })
 })
