@@ -13,7 +13,7 @@ const ApartmentIndex = ({ apartments }) => {
     <main>
       {apartments?.map((apartment, index) => {
         return (
-          <Card color="light" style={{ width: "18rem" }} key={index}>
+          <Card color="light" style={{ width: "18rem"}} key={index}>
             <img alt="Apartment Pic's" src={apartment.image} />
             <CardBody>
               <CardTitle tag="h5">{apartment.price}</CardTitle>

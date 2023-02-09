@@ -1,8 +1,8 @@
 import React from "react";
-import { useNavigate, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button } from "reactstrap";
 
-const Home = ({ sign_in_route, new_user_route, logged_in, current_user_id}) => {
+const Home = ({ sign_in_route, new_user_route, logged_in, current_user}) => {
   const navigate = useNavigate ()
 
   const viewListings = () => {
@@ -50,7 +50,7 @@ const Home = ({ sign_in_route, new_user_route, logged_in, current_user_id}) => {
           marginRight: "auto",
         }}
       >
-        <h3>{`Welcome, ${current_user_id}!`}</h3>
+        <h3>{`Welcome, ${current_user.email}!`}</h3>
         <p>Place holder</p>
         <button onClick={viewListings}>View Listings</button>
         <button onClick={viewMyListings}>View My Listings</button>
