@@ -30,7 +30,7 @@ const App = (props) => {
     <BrowserRouter>
       <Header {...props} />
       <Routes>
-        <Route exact path="/" element={<Home welcomeProp={props}/>} />
+        <Route exact path="/" element={<Home {...props}/>} />
         <Route path="/apartmentindex" element={<ApartmentIndex apartments={apartments}/>} />
         <Route path="/apartmentshow" element={<ApartmentShow />} />
         <Route path="/apartmentnew" element={<ApartmentNew />} />

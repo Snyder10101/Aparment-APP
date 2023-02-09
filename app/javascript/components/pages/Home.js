@@ -1,8 +1,8 @@
 import React from "react";
+import { useNavigate, NavLink } from "react-router-dom";
 import { Button } from "reactstrap";
-import { useNavigate } from "react-router-dom";
 
-const Home = ({ welcomeProp, new_user_route, sign_in_route, }) => {
+const Home = ({ sign_in_route, new_user_route, logged_in}) => {
   const navigate = useNavigate ()
 
   const viewListings = () => {
@@ -13,7 +13,7 @@ const Home = ({ welcomeProp, new_user_route, sign_in_route, }) => {
     navigate("/");
   };
 
-  if (!welcomeProp.logged_in) {
+  if (!logged_in) {
     return (
       <div
         style={{
@@ -28,17 +28,17 @@ const Home = ({ welcomeProp, new_user_route, sign_in_route, }) => {
       >
         <h1>Welcome to Raymonds Friends Apts</h1>
         <p>Place holder</p>
-        <Button href={new_user_route} className="nav-link">
-          Sign Up
-        </Button>
-        <Button href={sign_in_route} className="nav-link">
-          Sign In
-        </Button>
+        <NavLink to={new_user_route} >
+         <Button>Sign Up</Button>
+        </NavLink>
+        <NavLink to={sign_in_route}>
+          <Button>Sign In</Button>
+        </NavLink>
       </div>
     );
   }
   
-  if (welcomeProp.logged_in) {
+  if (logged_in) {
     return (
       <div
         style={{
