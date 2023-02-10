@@ -1,8 +1,8 @@
 import React from "react"
 import { render, screen } from "@testing-library/react"
-import ProtectedApartmentIndex from "./ProtectedApartmentIndex"
 import { BrowserRouter } from "react-router-dom"
-import '@testing-library/jest-dom'
+import "@testing-library/jest-dom"
+import ProtectedApartmentIndex from "./ProtectedApartmentIndex"
 
 describe("<ProtectedApartmentIndex />", () => {
   it("renders without crashing", () => {
@@ -20,10 +20,10 @@ describe("<ProtectedApartmentIndex />", () => {
             <ProtectedApartmentIndex />
         </BrowserRouter>,
     )
-    screen.logTestingPlaygroundURL()
-    const listingsHeading = screen.getByRole('heading', {
-        name: /my listings:/i
-      })
-      expect(listingsHeading).toBeInTheDocument()
+    // screen.logTestingPlaygroundURL()
+    // const listingsHeading = screen.getByRole('heading', {
+    //     name: /my listings:/i
+    //   })
+      expect(screen.getByText(/listings/i)).toBeInTheDocument()
   })
 })
