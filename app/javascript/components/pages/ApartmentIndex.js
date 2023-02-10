@@ -16,14 +16,17 @@ const ApartmentIndex = ({ apartments }) => {
           <Card color="light" style={{ width: "18rem"}} key={index}>
             <img alt="Apartment Pic's" src={apartment.image} />
             <CardBody>
-              <CardTitle tag="h5">{apartment.price}</CardTitle>
+              <CardTitle tag="h5">${apartment.price}</CardTitle>
               <CardSubtitle className="mb-2 text-muted" tag="h6">
-                Bed{apartment.bedrooms} Bath{apartment.bathrooms}
+                Bed {apartment.bedrooms} Bath {apartment.bathrooms}
               </CardSubtitle>
               <CardText>
-                {apartment.state} {apartment.city} {apartment.street}
+                {apartment.state},
+                
+                 {apartment.city}
+                  {apartment.street}
               </CardText>
-              <Button>Button</Button>
+              <Button>Learn More</Button>
             </CardBody>
           </Card>
         );
