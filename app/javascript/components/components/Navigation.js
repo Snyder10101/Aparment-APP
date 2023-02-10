@@ -19,6 +19,11 @@ const Navigation = ({
         </NavItem>
         {logged_in && (
           <NavItem>
+          <NavLink> 
+            <a href="/mylistings" className="nav-link">  
+              My Listings 
+            </a>
+          </NavLink>
             <a href={sign_out_route} className="nav-link">
               Sign Out
             </a>
