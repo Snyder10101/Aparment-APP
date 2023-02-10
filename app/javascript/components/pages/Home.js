@@ -10,7 +10,7 @@ const Home = ({ sign_in_route, new_user_route, logged_in, current_user}) => {
   };
 
   const viewMyListings = () => {
-    navigate("/");
+    navigate("/mylistings");
   };
 
   if (!logged_in) {
