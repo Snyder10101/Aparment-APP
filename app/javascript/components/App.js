@@ -26,6 +26,18 @@ const App = (props) => {
       })
       .catch((error) => console.log(error))
   }
+  const createApartment = () => {
+    fetch("http://localhost:3000/apartmentindex", {
+      body: JSON.stringify(),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+      .then((response) => response.json())
+      .then((payload) => readApartments(payload))
+      .catch((errors) => console.log("Apartment create errors:", errors))
+  }
   return (
     <BrowserRouter>
       <Header {...props} />
@@ -33,7 +45,7 @@ const App = (props) => {
         <Route exact path="/" element={<Home {...props}/>} />
         <Route path="/apartmentindex" element={<ApartmentIndex apartments={apartments}/>} />
         <Route path="/apartmentshow" element={<ApartmentShow />} />
-        <Route path="/apartmentnew" element={<ApartmentNew />} />
+        <Route path="/apartmentnew" element={<ApartmentNew createApartment={createApartment}/>} />
         <Route path="/apartmentedit" element={<ApartmentEdit />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
