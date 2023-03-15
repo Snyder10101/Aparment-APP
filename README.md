@@ -5,25 +5,12 @@ This app has been created for you to mimic the feeling of entering into a develo
 ## 👨‍💻 How We Got Here
 
 ```
-$ rails new apartment-app -d postgresql -T
-$ cd apartment-app
-$ rails db:create
-$ bundle add rspec-rails
-$ rails generate rspec:install
-$ bundle add webpacker
-$ bundle add react-rails
-$ rails webpacker:install
-$ rails webpacker:install:react
-$ yarn add @babel/preset-react
-$ yarn add @rails/activestorage
-$ yarn add @rails/ujs
-$ rails generate react:install
-$ rails generate react:component App
-$ bundle add devise
-$ rails generate devise:install
-$ rails generate devise User
-$ rails db:migrate
-$ rails generate controller Home index
+$ git clone https://github.com/Snyder10101/Aparment-APP.git
+$ cd Aparment-APP
+$ yarn
+$ yarn add reactstrap
+$ yarn add bootstrap
+$ rails s
 ```
 
 ## 🛠 Configurations
